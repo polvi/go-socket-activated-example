@@ -67,11 +67,6 @@ Description=Socket Activated Go HTTP Server Example
 [Service]
 # To run directly
 #ExecStart=/tmp/go-socket-activated-http-server-container/bin/socket-activated-http-server
-
-# Works in a container with no networking either. Inspired by:
-#   http://blog.oddbit.com/post/systemd-and-the-case-of-the-missing-network
-#
-
 ExecStart=/usr/bin/systemd-nspawn --private-network -D /tmp/go-socket-activated-http-server-container/ /bin/socket-activated-http-server
 ```
 
