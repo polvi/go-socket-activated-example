@@ -13,7 +13,7 @@ cd /tmp/
 git clone https://github.com/polvi/go-socket-activated-http-server-container-amd64.git
 ```
 
-Then drop the `.service` and `.socket` from this repo `/etc/systemd/system/`. 
+Then drop the `.service` and `.socket` from this repo into `/etc/systemd/system/`. 
 
 ```
 core@localhost ~ $ sudo systemctl status go-http-server
