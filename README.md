@@ -1,3 +1,9 @@
+To build:
+
+```
+go build socket-activated-http-server.go
+```
+
 This is an example of running a http go app with systemd socket activation. I also included a reference for how to do with [a minimal go container][1] (6.5M for this example). 
 
 [1]: https://github.com/polvi/go-socket-activated-http-server-container-amd64
@@ -23,14 +29,18 @@ Jun 15 21:21:29 localhost systemd[1]: Starting Socket for Go HTTP Server Example
 Jun 15 21:21:29 localhost systemd[1]: Listening on Socket for Go HTTP Server Example.
 ```
 
-This is where the actual socket activation occures. Note that the service is not started above:
+This is where the actual socket activation occurs. Note that go-http-server is not started above:
 
 ```
 core@localhost $ curl localhost:8000
 Hello World!
 Have interface: lo
 Have interface: enp0s3
+```
 
+Now go-http-server is started!
+
+```
 core@localhost ~ $ sudo systemctl status go-http-server        
 go-http-server.service - Socket Activated Go HTTP Server Example
    Loaded: loaded (/etc/systemd/system/go-http-server.service; static)
