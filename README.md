@@ -85,4 +85,4 @@ Have interface: lo
 Note that it worked with a private interaface as well! This means the application was completely network isolated ([inspired by this post][2]), but was able to serve from a socket systemd gave it. 
 
 [1]: https://github.com/polvi/go-socket-activated-http-server-container-amd64
-[2]: http://blog.oddbit.com/post/systemd-and-the-case-of-the-missing-network
+[2]: http://blog.oddbit.com/2013/01/28/net-with-no-net/
